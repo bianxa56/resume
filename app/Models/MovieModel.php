@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class MovieModel extends Model
 {
-    protected $table            = 'resumes';
+    protected $table            = 'movie';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

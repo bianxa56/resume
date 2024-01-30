@@ -27,3 +27,7 @@ $routes->post('blog/update/(:num)', 'BlogController::update/$1');
 
 //movie routes
 $routes->get('movie', 'MovieController::index');
+$routes->get('createMovie', 'MovieController::create');
+$routes->post('storeMovie', 'MovieController::store');
+$routes->get('editMovie/(:num)', 'MovieController::edit/$1');
+$routes->post('updateMovie/(:num)', 'MovieController::update/$1');
