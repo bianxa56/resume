@@ -19,7 +19,7 @@
 
                 <label for="movie_synopsis" class="label">Movie Synopsis:</label>
                 <div class="control">
-                    <input class="input" type="text" id="movie_synopsis" name="movie_synopsis" value="<?= $movie["movie_synopsis"] ?>">
+                 <textarea class="textarea" name="movie_synopsis" id="movie_synopsis"><?= $movie["movie_synopsis"] ?></textarea>
                 </div>
 
                 <div class="field">

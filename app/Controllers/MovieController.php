@@ -32,7 +32,7 @@ class MovieController extends BaseController
         $movie_model = new MovieModel;
         $movie = $movie_model->where('id', $id)->first();
         
-        return view('editMovie', [
+        return view('website/movie/editMovie', [
             "id" => $id,
             "movie" => $movie,
         ]);
@@ -73,5 +73,22 @@ class MovieController extends BaseController
 
         return redirect()->back();
 
+    }
+
+    public function delete($id)
+    {
+        $movie_model = new MovieModel();
+
+        $existingMovie = $movie_model->find($id);
+
+        if ($existingMovie) {
+            
+            $movie_model->delete($id);
+
+            return redirect()->to(base_url('movie'));
+
+        } else {
+            return "Movie not found";
+        }
     }
 }

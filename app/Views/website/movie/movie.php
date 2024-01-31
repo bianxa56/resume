@@ -16,7 +16,8 @@
                     <tr>
                         <th>Movie Title</th>
                         <th>Movie Synopsis</th>
-                        <th>Command</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,6 +26,7 @@
                             <td><?= $movie['movie_title'] ?></td>
                             <td><?= $movie['movie_synopsis'] ?></td>
                             <td><a class="button is-link" href="<?= base_url('editMovie/') . $movie['id'] ?>">Edit</a></td>
+                            <td><a class="button is-link is-danger" href="<?= base_url('deleteMovie/') . $movie['id'] ?>">Remove</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
