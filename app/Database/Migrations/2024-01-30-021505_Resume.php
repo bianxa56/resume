@@ -23,6 +23,15 @@ class Resume extends Migration
                 'type' => 'TEXT',
                 'null' => true,
             ],
+            'movie_genre' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ],
+            'movie_image' => [
+                'type' => 'VARCHAR',
+                'constraint' => '255',
+                'null' => true,
+            ]
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('movie');

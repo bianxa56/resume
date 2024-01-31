@@ -38,20 +38,35 @@ class MovieController extends BaseController
         ]);
     }
 
+    public function showAll()
+    {
+        $movie_model = new MovieModel();
+        $movies = $movie_model->findAll();
+
+        $array = [
+            "movies" => $movies,
+        ];
+
+        return view('website/movie/showAll', $array);
+    }
+
     public function store()
     {
         $movie_title = esc($this->request->getPost('movie_title'));
         $movie_synopsis = esc($this->request->getPost('movie_synopsis'));
-
+        $movie_genre = esc($this->request->getPost('movie_genre'));
         $movie_data = [
             'movie_title' => $movie_title,
             'movie_synopsis' => $movie_synopsis,
+            'movie_genre' => $movie_genre,
         ];
 
         $movie_model = new MovieModel();
         $movie_model->insert($movie_data);
 
-        return redirect()->back();
+        return redirect()->to(base_url('movie'));
+
+        // return redirect()->back();
 
     }
 
@@ -59,10 +74,13 @@ class MovieController extends BaseController
     {
         $movie_title = esc($this->request->getPost('movie_title'));
         $movie_synopsis = esc($this->request->getPost('movie_synopsis'));
+        $movie_genre = esc($this->request->getPost('movie_genre'));
+
 
         $movie_data = [
             'movie_title' => $movie_title,
             'movie_synopsis' => $movie_synopsis,
+            'movie_genre' => $movie_genre,
         ];
 
         $movie_model = new MovieModel();
@@ -71,7 +89,8 @@ class MovieController extends BaseController
             ->set($movie_data)
             ->update();
 
-        return redirect()->back();
+        return redirect()->to(base_url('movie'));    
+        // return redirect()->back();
 
     }
 

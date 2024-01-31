@@ -6,31 +6,41 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     </head>
     <body>
-        <h1>My Favorite Movies</h1>
+        <h1 class="title is-size-1 has-text-centered">My Favorite Movies</h1>
         <div class="container">
-        <a class="button is-primary" href="<?= base_url('createMovie') ?>">Create</a>
-        <a class="button is-info" href="<?= base_url('editMovie') ?>">Edit</a>
-        
-        <table class="table is-fullwidth">
-                <thead>
-                    <tr>
-                        <th>Movie Title</th>
-                        <th>Movie Synopsis</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($movies as $movie): ?>
-                        <tr>
-                            <td><?= $movie['movie_title'] ?></td>
-                            <td><?= $movie['movie_synopsis'] ?></td>
-                            <td><a class="button is-link" href="<?= base_url('editMovie/') . $movie['id'] ?>">Edit</a></td>
-                            <td><a class="button is-link is-danger" href="<?= base_url('deleteMovie/') . $movie['id'] ?>">Remove</a></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+            
+            <div class="container">
+                <?php foreach ($movies as $movie): ?>
+                    <div class=card>
+                        <div class="card-content">
+                            <p class="title">
+                                <?= $movie['movie_title'] ?>
+                            </p>
+                            <p class="subtitle">
+                                <?= $movie['movie_genre'] ?> .  1990
+                            </p>
+                            <p class="subtitle">
+                                <?= $movie['movie_synopsis'] ?>
+                            </p>
+                        </div>    
+                        <footer class="card-footer">
+                            <p class="card-footer-item">
+                            <span>
+                                <a href="<?= base_url('editMovie/') . $movie['id'] ?>">Edit </a>
+                            </span>
+                            </p>
+                            <p class="card-footer-item">
+                            <span>
+                                <a href="<?= base_url('deleteMovie/') . $movie['id'] ?>" style="color: red;">Remove</a>
+                            </span>
+
+                            </p>
+                        </footer>
+                    </div>
+                <?php endforeach; ?>   
+            </div>
+
+            <a class="button is-primary is-pulled-right mt-2" href="<?= base_url('createMovie') ?>">Add Movie</a>
         </div>
     </body>
 </html>

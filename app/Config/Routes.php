@@ -30,3 +30,5 @@ $routes->post('storeMovie', 'MovieController::store');
 $routes->get('editMovie/(:num)', 'MovieController::edit/$1');
 $routes->post('updateMovie/(:num)', 'MovieController::update/$1');
 $routes->get('deleteMovie/(:num)', 'MovieController::delete/$1');
+
+$routes->get('showAll', 'MovieController::showAll');
