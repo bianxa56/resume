@@ -27,11 +27,10 @@ class Resume extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'movie_image' => [
-                'type' => 'VARCHAR',
-                'constraint' => '255',
+            'movie_date' => [
+                'type' => 'YEAR',
                 'null' => true,
-            ]
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('movie');

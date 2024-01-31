@@ -1,3 +1,7 @@
+<?= $this->extend('layouts/main') ?>
+
+<?= $this->section('content')?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -5,19 +9,32 @@
         <title>Movies</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     </head>
+    <style>
+        .card.mb-4 {
+            background-color: #638889;
+        }
+        .card-footer {
+            border-top: 1px solid #ccc; 
+        }
+        .card-content p.title,
+        .card-content p.subtitle {
+            font-size: 20px; 
+            color: white;
+        }
+    </style>
     <body>
-        <h1 class="title is-size-1 has-text-centered">My Favorite Movies</h1>
+        <h1 class="title is-2 has-text-weight-bold has-text-centered mt-2" style="color: #638889;">My Favorite Movies</h1>
         <div class="container">
             
             <div class="container">
                 <?php foreach ($movies as $movie): ?>
-                    <div class=card>
+                    <div class="card mb-4">
                         <div class="card-content">
                             <p class="title">
                                 <?= $movie['movie_title'] ?>
                             </p>
                             <p class="subtitle">
-                                <?= $movie['movie_genre'] ?> .  1990
+                                <?= $movie['movie_genre'] ?> · <?= $movie['movie_date'] ?>
                             </p>
                             <p class="subtitle">
                                 <?= $movie['movie_synopsis'] ?>
@@ -44,3 +61,4 @@
         </div>
     </body>
 </html>
+<?= $this->endSection() ?>

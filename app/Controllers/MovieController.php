@@ -55,10 +55,13 @@ class MovieController extends BaseController
         $movie_title = esc($this->request->getPost('movie_title'));
         $movie_synopsis = esc($this->request->getPost('movie_synopsis'));
         $movie_genre = esc($this->request->getPost('movie_genre'));
+        $movie_date = esc($this->request->getPost('movie_date'));
+        
         $movie_data = [
             'movie_title' => $movie_title,
             'movie_synopsis' => $movie_synopsis,
             'movie_genre' => $movie_genre,
+            'movie_date' => $movie_date,
         ];
 
         $movie_model = new MovieModel();
@@ -75,12 +78,13 @@ class MovieController extends BaseController
         $movie_title = esc($this->request->getPost('movie_title'));
         $movie_synopsis = esc($this->request->getPost('movie_synopsis'));
         $movie_genre = esc($this->request->getPost('movie_genre'));
-
+        $movie_date = esc($this->request->getPost('movie_date'));
 
         $movie_data = [
             'movie_title' => $movie_title,
             'movie_synopsis' => $movie_synopsis,
             'movie_genre' => $movie_genre,
+            'movie_date' => $movie_date,
         ];
 
         $movie_model = new MovieModel();

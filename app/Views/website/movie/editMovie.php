@@ -7,9 +7,9 @@
     </head>
     <body>
         <div class="container">
-            <h1>Edit your movie</h1>
-            <a class="button is-primary" href=<?= base_url('movie') ?>>Index</a>
-            <a class="button is-info" href=<?= base_url('createMovie') ?>>Create</a>
+            <section class="section">
+                <h1 class="title is-2 has-text-weight-bold has-text-centered" style="color: #638889;">Edit Movie</h1>
+            </section>
 
             <form method="post" action="<?= base_url('updateMovie/') . $movie["id"]?>">
                 <label for="movie_title" class="label">Movie Title:</label>
@@ -20,6 +20,11 @@
                 <label for="movie_genre" class="label">Movie Genre:</label>
                 <div class="control">
                     <input class="input" type="text" id="movie_genre" name="movie_genre" value="<?= $movie["movie_genre"] ?>">
+                </div>
+
+                <label for="movie_date" class="label">Date Released:</label>
+                <div class="control">
+                    <input class="input" type="year" id="movie_date" name="movie_date" value="<?= $movie["movie_date"] ?>">
                 </div>
 
                 <label for="movie_synopsis" class="label">Movie Synopsis:</label>

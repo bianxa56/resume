@@ -4,7 +4,7 @@
 
     <?= $this->section('content') ?>
     <div>
-        <h6 class="title is-2 has-text-weight-bold has-text-centered" style="color: #88AB8E; margin-top: 20px;">Education</h6>
+        <h6 class="title is-2 has-text-weight-bold has-text-centered" style="color: #638889; margin-top: 20px;">Education</h6>
     </div>
 
     <div class="container text-center" style="margin-top: 30px;">
@@ -15,7 +15,7 @@
         </div>    
     </div>
     <div>
-      <h6 class="title is-2 has-text-weight-bold has-text-centered" style="color: #88AB8E; margin-top: 20px; margin-bottom: 30px;">Life as an IT student</h6>
+      <h6 class="title is-2 has-text-weight-bold has-text-centered" style="color: #638889; margin-top: 20px; margin-bottom: 30px;">Life as an IT student</h6>
   </div>
 <div class="columns" style="margin: 10px;">
     <?= $this->include('partials/itpics/cross') ?>

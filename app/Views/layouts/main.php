@@ -16,8 +16,6 @@
         
     }
 
-    
-
 </style>
 
 <body>
@@ -26,6 +24,7 @@
         <a class="navbar-item" style="color: white;" href="<?= base_url("index")?>">Home</a>
         <a class="navbar-item" style="color: white;" href="<?= base_url("about")?>">About me</a>
         <a class="navbar-item" style="color: white;" href="<?= base_url("education")?>">Education</a>
+        <a class="navbar-item" style="color: white;" href="<?= base_url("movie")?>">Favorites</a>
     </div>
 </nav>
 
