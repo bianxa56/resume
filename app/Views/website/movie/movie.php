@@ -11,7 +11,7 @@
     </head>
     <style>
         .card.mb-4 {
-            background-color: #638889;
+            background-color: white;
         }
         .card-footer {
             border-top: 1px solid #ccc; 
@@ -19,7 +19,7 @@
         .card-content p.title,
         .card-content p.subtitle {
             font-size: 20px; 
-            color: white;
+            color: black;
         }
     </style>
     <body>
@@ -36,6 +36,9 @@
                             <p class="subtitle">
                                 <?= $movie['movie_genre'] ?> · <?= $movie['movie_date'] ?>
                             </p>
+                            <p class="img">
+                               
+                               </p>
                             <p class="subtitle">
                                 <?= $movie['movie_synopsis'] ?>
                             </p>

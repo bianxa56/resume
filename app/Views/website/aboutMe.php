@@ -5,7 +5,7 @@
     <div class="container" >
         <div class="columns">
             <div class="column">
-                <figure class="image is-256x256" style="margin: 70px;">
+                <figure class="image is-256x256" style="margin: 70px 70px 0px 70px;">
                     <img class="is-rounded"  src="assets/home.jpg">
                 </figure>
             </div>                       
