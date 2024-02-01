@@ -36,24 +36,20 @@
                             <p class="subtitle">
                                 <?= $movie['movie_genre'] ?> · <?= $movie['movie_date'] ?>
                             </p>
-                            <p class="img">
-                               
-                               </p>
                             <p class="subtitle">
                                 <?= $movie['movie_synopsis'] ?>
                             </p>
                         </div>    
                         <footer class="card-footer">
                             <p class="card-footer-item">
-                            <span>
-                                <a href="<?= base_url('editMovie/') . $movie['id'] ?>">Edit </a>
-                            </span>
+                                <span>
+                                    <a href="<?= base_url('editMovie/') . $movie['id'] ?>">Edit </a>
+                                </span>
                             </p>
                             <p class="card-footer-item">
-                            <span>
-                                <a href="<?= base_url('deleteMovie/') . $movie['id'] ?>" style="color: red;">Remove</a>
-                            </span>
-
+                                <span>
+                                    <a href="<?= base_url('deleteMovie/') . $movie['id'] ?>" style="color: red;">Remove</a>
+                                </span>
                             </p>
                         </footer>
                     </div>
