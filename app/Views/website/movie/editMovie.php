@@ -11,25 +11,25 @@
                 <h1 class="title is-2 has-text-weight-bold has-text-centered" style="color: #638889;">Edit Movie</h1>
             </section>
 
-            <form method="post" action="<?= base_url('updateMovie/') . $movie["id"]?>">
-                <label for="movie_title" class="label">Movie Title:</label>
+            <form method="post" action="<?= base_url('update-movie/') . $movie["id"]?>">
+                <label for="movie-title" class="label">Movie Title:</label>
                 <div class="control">
-                    <input class="input" type="text" id="movie_title" name="movie_title" value="<?= $movie["movie_title"] ?>">
+                    <input class="input" type="text" id="movie-title" name="movie-title" value="<?= $movie["movie_title"] ?>">
                 </div>
                 
-                <label for="movie_genre" class="label">Movie Genre:</label>
+                <label for="movie-genre" class="label">Movie Genre:</label>
                 <div class="control">
-                    <input class="input" type="text" id="movie_genre" name="movie_genre" value="<?= $movie["movie_genre"] ?>">
+                    <input class="input" type="text" id="movie-genre" name="movie-genre" value="<?= $movie["movie_genre"] ?>">
                 </div>
 
-                <label for="movie_date" class="label">Date Released:</label>
+                <label for="movie-date" class="label">Date Released:</label>
                 <div class="control">
-                    <input class="input" type="year" id="movie_date" name="movie_date" value="<?= $movie["movie_date"] ?>">
+                    <input class="input" type="year" id="movie-date" name="movie-date" value="<?= $movie["movie_date"] ?>">
                 </div>
 
-                <label for="movie_synopsis" class="label">Movie Synopsis:</label>
+                <label for="movie-synopsis" class="label">Movie Synopsis:</label>
                 <div class="control">
-                    <textarea class="textarea" name="movie_synopsis" id="movie_synopsis"><?= $movie["movie_synopsis"] ?></textarea>
+                    <textarea class="textarea" name="movie-synopsis" id="movie-synopsis"><?= $movie["movie_synopsis"] ?></textarea>
                 </div>
 
                 <div class="field">

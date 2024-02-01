@@ -24,7 +24,7 @@ class MovieController extends BaseController
 
     public function create()
     {
-        return view("website/movie/createMovie");
+        return view("website/movie/createmovie");
     }
     
     public function edit($id)
@@ -32,7 +32,7 @@ class MovieController extends BaseController
         $movie_model = new MovieModel;
         $movie = $movie_model->where('id', $id)->first();
         
-        return view('website/movie/editMovie', [
+        return view('website/movie/editmovie', [
             "id" => $id,
             "movie" => $movie,
         ]);
@@ -47,15 +47,15 @@ class MovieController extends BaseController
             "movies" => $movies,
         ];
 
-        return view('website/movie/showAll', $array);
+        return view('website/movie/showall', $array);
     }
 
     public function store()
     {
-        $movie_title = esc($this->request->getPost('movie_title'));
-        $movie_synopsis = esc($this->request->getPost('movie_synopsis'));
-        $movie_genre = esc($this->request->getPost('movie_genre'));
-        $movie_date = esc($this->request->getPost('movie_date'));
+        $movie_title = esc($this->request->getPost('movie-title'));
+        $movie_synopsis = esc($this->request->getPost('movie-synopsis'));
+        $movie_genre = esc($this->request->getPost('movie-genre'));
+        $movie_date = esc($this->request->getPost('movie-date'));
         
         $movie_data = [
             'movie_title' => $movie_title,
@@ -75,10 +75,10 @@ class MovieController extends BaseController
 
     public function update($id)
     {
-        $movie_title = esc($this->request->getPost('movie_title'));
-        $movie_synopsis = esc($this->request->getPost('movie_synopsis'));
-        $movie_genre = esc($this->request->getPost('movie_genre'));
-        $movie_date = esc($this->request->getPost('movie_date'));
+        $movie_title = esc($this->request->getPost('movie-title'));
+        $movie_synopsis = esc($this->request->getPost('movie-synopsis'));
+        $movie_genre = esc($this->request->getPost('movie-genre'));
+        $movie_date = esc($this->request->getPost('movie-date'));
 
         $movie_data = [
             'movie_title' => $movie_title,

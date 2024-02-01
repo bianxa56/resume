@@ -1,6 +1,3 @@
-<?= $this->extend('layouts/main') ?>
-
-<?= $this->section('content')?>
 
 <html>
     <head>
@@ -22,6 +19,10 @@
             color: black;
         }
     </style>
+    <?= $this->extend('layouts/main') ?>
+
+    <?= $this->section('content')?>
+
     <body>
         <h1 class="title is-2 has-text-weight-bold has-text-centered mt-2" style="color: #638889;">My Favorite Movies</h1>
         <div class="container">
@@ -43,12 +44,12 @@
                         <footer class="card-footer">
                             <p class="card-footer-item">
                                 <span>
-                                    <a href="<?= base_url('editMovie/') . $movie['id'] ?>">Edit </a>
+                                    <a href="<?= base_url('edit-movie/') . $movie['id'] ?>">Edit </a>
                                 </span>
                             </p>
                             <p class="card-footer-item">
                                 <span>
-                                    <a href="<?= base_url('deleteMovie/') . $movie['id'] ?>" style="color: red;">Remove</a>
+                                    <a href="<?= base_url('delete-movie/') . $movie['id'] ?>" style="color: red;">Remove</a>
                                 </span>
                             </p>
                         </footer>
@@ -56,7 +57,7 @@
                 <?php endforeach; ?>   
             </div>
 
-            <a class="button is-primary is-pulled-right mt-2" href="<?= base_url('createMovie') ?>">Add Movie</a>
+            <a class="button is-primary is-pulled-right mt-2" href="<?= base_url('create-movie') ?>">Add Movie</a>
         </div>
     </body>
 </html>
